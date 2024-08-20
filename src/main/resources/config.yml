@@ -1,0 +1,28 @@
+#最大饥饿值 [0-20]
+hungerMax : 19
+#最小饥饿值 [0-20]（注意：这不影响饱和值）
+hungerMin : 1
+#由本插件实现的，每刻增加的饥饿值 [0-∞]（每秒增加量是这个的二十倍）
+hungerTickRecovery : 0.2
+#当发生饥饿值消耗时，冷却一段时间后才会继续本插件的饥饿值回复，此为冷却时间（单位秒）[应为0.05的整数倍]
+hungerCostCooldown : 3
+#启用饱和度（关闭时，饱和值永远等于饥饿值）（开启时，饥饿值达到满值，hungerTickRecovery将会作用于饱和度）
+enableSaturation : false
+#是否运行吃食物回复饥饿值
+enableFoodRecovery : false
+#各种事件的饥饿值消耗（只影响通过原版消耗度机制作用饥饿值的功能）
+hungerCost :
+  jumpWalk : 0.25 #走路时跳跃
+  jumpSprint : 1.0 #奔跑时跳跃
+  blockMined : 0 #破坏方块
+  damaged : 0 #受到伤害
+  attack : 0 #进行攻击
+  swim : 0.08 #游泳时每刻
+  walkUnderwater : 0.01 #在水中步行每刻
+  walkOnWater : 0.01 #在水上步行每刻
+  sprint : 0.05 #奔跑时每刻
+  crouch : 0 #蹲行时每刻
+  walk : 0 #走路时每刻
+  regen : 5 #自然回复一点生命值
+  hungerEffect : 0.05 #每一级饥饿效果每刻消耗饥饿值（每秒消耗量是这个的二十倍）
+  enableUnknown : false #是否允许未知类型的饥饿值

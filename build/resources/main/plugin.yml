@@ -1,0 +1,6 @@
+main: saltsheep.chm.CustomHungerMechanics
+name: CustomHungerMechanics
+version: 1.0.0
+description: This plugin is developed to custom hunger mechanics.
+author: Saltfish_Sheep
+prefix: CustomHunger

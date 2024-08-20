@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group = plugin_group
+version = plugin_version
+
+repositories {
+
+    mavenCentral()
+
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+
+    maven { url 'https://repo.codemc.io/repository/maven-public/' }
+
+}
+
+dependencies {
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+
+    // compileOnly 'de.tr7zw:item-nbt-api-plugin:2.13.2'
+
+    compileOnly 'org.jetbrains:annotations:24.1.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
